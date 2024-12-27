@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "tweaks",
+  "version": "${version}",
+  "name": "Longuint's Tweaks",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/tweaks/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "longuint.tweaks.client.TweaksClient"
+    ],
+    "main": [
+      "longuint.tweaks.Tweaks"
+    ]
+  },
+  "mixins": [
+    "tweaks.mixins.json",
+    {
+      "config": "tweaks.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

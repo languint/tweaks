@@ -1,0 +1,5 @@
+/gamemode creative
+/summon minecraft:villager
+/give @s minecraft:lead
+/give @s minecraft:crafting_table
+/give @s minecraft:acacia_boat

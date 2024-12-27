@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class LanternBlockMixin {
 
     @Inject(method = "canPlaceAt", at = @At("HEAD"), cancellable = true)
-    private void allowUpsideDownStairs(BlockState state, @NotNull WorldView world, @NotNull BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+    private void canPlaceAt(BlockState state, @NotNull WorldView world, @NotNull BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         Direction direction = attachedDirection(state).getOpposite();
         BlockPos offsetPos = pos.offset(direction);
         BlockState offsetState = world.getBlockState(offsetPos);
